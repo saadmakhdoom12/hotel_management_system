@@ -1,0 +1,209 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int id,pass,r1,r2,r3;
+	char a,again,book;
+	int arr1[10] = {0,0,0,0,1,0,1,1,0,1};
+	int arr2[10] = {1,0,0,1,0,0,0,1,0,0};
+	int arr3[10] = {1,0,1,0,1,0,1,0,1,0};
+	cout<<endl;
+	cout<<endl;
+	cout<<"    *******************************************************    "<<endl;   
+    cout<<"                WELCOME TO HOTEL MANAGEMENT SYSTEM"             <<endl;
+	cout<<"    *******************************************************    "<<endl;   
+    cout<<endl;
+     bool done = false;
+      while (done!=true)
+{
+    done = true;
+    cout<<"Enter your ID:";
+    cin>>id;
+   	cout<<"Enter your Password:"; 
+	cin>>pass;
+   
+    if((id==844 || id==930) && pass==123  ) 
+	{
+	 do
+    {
+    int book1=0,book2=0,book3=0;
+	int free1=0,free2=0,free3=0;
+    cout<<"you are login with Employee ID:"<<  id  <<endl;
+    cout<<"Press F to book room in first flour"<<endl;
+    cout<<"Press S to book room in Second flour"<<endl;
+    cout<<"Press T to book room in Third flour"<<endl;
+    cout<<"Press 0 to Exit application. "<<endl;
+    cout<<"Enter Here: ";
+    cin>>a;
+    
+    switch(a)
+    {
+   	case 'f':
+    case 'F':
+         cout<<" ** Welcome to the First Floor **"<<endl;
+		 for(int i =0; i<10; i++){
+		 	if(arr1[i]==1){
+		 		book1=book1+1;
+		 		cout<<"Room " << i+1 << " is booked Second Floor"<<endl;
+				 }
+				 else
+				 {
+			 	free1=free1+1;
+			 }
+		 }
+		 cout<<"Booked  Room  in First Floor"<<endl; 
+		 cout<<book1<<endl; 
+		 cout<<"Free  Room  in First Floor"<<endl; 
+		 cout<<free1<<endl;  
+		  cout<<"Press B to book a Room or E to Exit:"<<endl;
+   		 cin>>book;  
+			if(book=='B' || book=='b'){
+
+		 cout<<"Enter room number from 1 to 10:"<<endl;
+   		 cin>>r1;
+   		 if(r1<11){
+		if(arr1[r1-1]==1){
+			cout<<"Already Booked "<<endl; 
+		}else{
+   		 arr1[r1-1] = 1;
+   		 book1 = book1+1;
+   		 free1 = free1-1;
+   		 cout<<"Booked  Room  in First Floor"<<endl; 
+		 cout<<book1<<endl; 
+		 cout<<"Free  Room  in First Floor"<<endl; 
+		 cout<<free1<<endl; 
+	}
+		  }else if(book=='E' || book=='e'){
+		  return 0; 
+		  }
+		  else{
+		  
+		   cout<<"you have enter an invalid Choice "<<endl;
+                 cout<<endl;
+}
+
+   	}else{
+   		cout<<"you have enter an invalid Choice "<<endl;
+        cout<<endl;
+	   }
+			   
+         break;
+         case 's':
+         case 'S':
+         cout<<"  ** Welcome to the Second Floor **"<<endl;
+         		 for(int i =0; i<10; i++){
+		 	if(arr2[i]==1){
+		 		book2=book2+1;
+		 		cout<<"Room " << i+1 << " is booked Second Floor"<<endl;
+				 }else{
+			 	free2=free2+1;
+			 }
+		 }
+		 cout<<"Booked  Room  in 2ND Floor"<<endl; 
+		 cout<<book2<<endl; 
+		 cout<<"Free  Room  in 2ND Floor"<<endl; 
+		 cout<<free2<<endl;  
+		 
+		 	  cout<<"Press B to book a Room or E to Exit:"<<endl;
+   		 cin>>book;  
+			if(book=='B' || book=='b'){
+
+				cout<<"Enter room number from 1 to 10:"<<endl;
+   		 cin>>r2;
+   		 if(r2<11){
+		if(arr2[r2-1]==1){
+			cout<<"Already Booked "<<endl; 
+		}else{
+   		 arr1[r2-1] = 1;
+   		 book2 = book2+1;
+   		 free2 = free2-1;
+   		 cout<<"Booked  Room  in 2nd Floor"<<endl; 
+		 cout<<book2<<endl; 
+		 cout<<"Free  Room  in 2nd Floor"<<endl; 
+		 cout<<free2<<endl; 
+	}
+		  }else if(book=='E' || book=='e'){
+		  return 0; 
+		  }
+		  else{
+		  
+		   cout<<"you have enter an invalid Choice "<<endl;
+                 cout<<endl;
+}
+   	}else{
+   		cout<<"you have enter an invalid Choice "<<endl;
+        cout<<endl;
+	   }
+			   
+    
+         break;
+         case 't':
+         case 'T':
+         cout<<"** Welcome to the Third Floor  **"<<endl;
+          		 for(int i =0; i<10; i++){
+		 	if(arr3[i]==1){
+		 		book3=book3+1;
+		 		cout<<"Room " << i+1 << " is booked 3RD Floor"<<endl;
+				 }else{
+			 	free3=free3+1;
+			 }
+		 }
+		 cout<<"Booked  Room  in 3RD Floor"<<endl; 
+		 cout<<book3<<endl; 
+		 cout<<"Free  Room  in 3RD Floor"<<endl; 
+		 cout<<free3<<endl; 
+		 cout<<"Press B to book a Room or E to Exit:"<<endl;
+   		 cin>>book;  
+			if(book=='B' || book=='b'){
+
+				cout<<"Enter room number from 1 to 10:"<<endl;
+   		 cin>>r3;
+   		 if(r3<11){
+		if(arr3[r1-1]==1){
+			cout<<"Already Booked "<<endl; 
+		}else{
+   		 arr3[r3-1] = 1;
+   		 book3 = book3+1;
+   		 free3 = free3-1;
+   		 cout<<"Booked  Room  in 3rd Floor"<<endl; 
+		 cout<<book3<<endl; 
+		 cout<<"Free  Room  in 3rd Floor"<<endl; 
+		 cout<<free3<<endl; 
+	}
+		  }else if(book=='E' || book=='e'){
+		  return 0; 
+		  }
+		  else{
+		  
+		   cout<<"you have enter an invalid Choice "<<endl;
+                 cout<<endl;
+}
+   	}else{
+   		cout<<"you have enter an invalid Choice "<<endl;
+        cout<<endl;
+	   }
+			   
+     
+          break;
+		  case '0':
+		  return 0;           
+  default:
+                 cout<<"you have enter an invalid Choice "<<endl;
+                 cout<<endl;
+                 }
+   
+cout<<"Press 1 to go back into MAIN Menu or 0 to terminate the program: ";                    
+cin>>again;
+}
+while (again=='1'); 
+cout<<"Thankyou! for using Hotel Reservation application."<<endl;
+cout<<endl;  
+    }
+    else{
+    		cout<<"invalid ID or Password";
+    		done = false;
+    		cout<<endl;
+	}
+}
+
+return 0;}
