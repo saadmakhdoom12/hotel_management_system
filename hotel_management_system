@@ -1,3 +1,5 @@
+// This is a simple hotel management system in C++ language.
+
 #include<iostream>
 using namespace std;
 int main()
